@@ -3,7 +3,7 @@ package edu.iut.app;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Person implements Criteria {
+public class Person{
 	
 	public enum PersonFunction{
 		/* EX2 : Internationalisation */
@@ -79,17 +79,7 @@ public class Person implements Criteria {
 	protected String email;
 	protected String phone;
 	
-	@Override
-	public List<ExamEvent> meetCriteria(List<ExamEvent> Exam){
-	      List<ExamEvent> PersonExam = new ArrayList<ExamEvent>(); 
-	      
-	      for (ExamEvent examEvent: Exam) {
-	         if(examEvent.getStudent()!= null){
-	            PersonExam.add(examEvent);
-	         }
-	      }
-	      return PersonExam;
-	   }
+	
 
 
 }

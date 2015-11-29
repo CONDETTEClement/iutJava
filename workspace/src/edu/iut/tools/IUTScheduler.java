@@ -8,6 +8,7 @@ import java.util.Locale;
 import edu.iut.app.CommandLineOption;
 import edu.iut.app.CommandLineParser;
 
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JFrame;
@@ -29,20 +30,8 @@ public class IUTScheduler {
 		System.err.println("Option:"+commandLineParser.getOption("config").getValue());
 		SwingUtilities.invokeLater(new Runnable() {
 		    public void run() {
-		        JFrame mainFrame = new edu.iut.gui.frames.SchedulerFrame("IUT Scheduler");
-		        mainFrame.setVisible(true);		     
-		        JMenuBar menuBar;
-		        JMenu menu, submenu;
-		        JMenuItem menuItem;
-		        JRadioButtonMenuItem rbMenuItem;
-		        JCheckBoxMenuItem cbMenuItem;
-
-		        menuBar = new JMenuBar();
-
-		        menu = new JMenu("A Menu");
-		        menu.setMnemonic(KeyEvent.VK_A);
-		        menu.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
-		        menuBar.add(menu);
+		    	JFrame mainFrame = new edu.iut.gui.frames.SchedulerFrame("IUT Scheduler");
+		    	mainFrame.setVisible(true);
 		    }
 		});
 	}
